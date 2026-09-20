@@ -1,6 +1,6 @@
 # AI-Powered PDF OCR & Auto-Renaming Engine
 
-An advanced computer vision and document automation tool designed to eliminate the manual data entry associated with naming and sorting engineering submittals and inspection requests. This engine reads, interprets, and strictly validates complex serial numbers from PDF documents against a dynamic project database.
+Desktop tool that reads serial numbers from scanned PDF submittals using OCR, matches them against a project database, and renames each file automatically. Ambiguous cases go to a manual review window.
 
 ## ⚠️ Repository Note
 *This repository serves as a portfolio showcase of the architectural logic, OCR pipeline, and UI/UX design. The proprietary Python source code is withheld to protect intellectual property.*
