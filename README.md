@@ -15,11 +15,11 @@ Document Control teams receive thousands of scanned PDFs (Submittals, IRs, RFIs)
 * **Multi-Strategy Text Extraction:** Automatically falls back on different Page Segmentation Modes (PSM 11 → 3 → 6) and rotational checks (90°, 180°, 270°) to guarantee text extraction regardless of the document's orientation or layout.
 
 ### 2. Fuzzy Matching & Deduplication
-* Compares extracted raw text against a dynamically built JSON database of the project's exact folder structures[cite: 3].
+* Compares extracted raw text against a dynamically built JSON database of the project's exact folder structures.
 * Utilizes `difflib` for fuzzy string matching (handling typical OCR noise) and applies strict Regex pattern validation to ensure the matched serial complies with engineering standards.
 
 ### 3. Human-in-the-Loop (HITL) Validation
-* **Smart Safety Flags:** The algorithm distinguishes between safe letter corrections (e.g., OCR reading '0' instead of 'O' in a letter segment) and dangerous digit corrections. Any ambiguity in numeric segments instantly halts the auto-rename process[cite: 3].
+* **Smart Safety Flags:** The algorithm distinguishes between safe letter corrections (e.g., OCR reading '0' instead of 'O' in a letter segment) and dangerous digit corrections. Any ambiguity in numeric segments instantly halts the auto-rename process.
 * **High-Res Zoom UI:** Ambiguous files are routed to a custom `customtkinter` Review Window. It renders a 400 DPI preview stored directly in memory, allowing users to zoom up to 6x seamlessly without quality loss to manually verify the serial number before proceeding.
 
 ### 4. High-Performance Concurrency
